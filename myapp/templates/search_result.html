@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Results</title>
+</head>
+
+<body>
+    <h1>Search Results</h1>
+    {% if data %}
+    <table>
+        <thead>
+            <tr>
+             
+                <th>Name</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+             
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No records found.</p>
+    {% endif %}
+    <a href="search.html">Search Again</a>
+</body>
+
+</html>
